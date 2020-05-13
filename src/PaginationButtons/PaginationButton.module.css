@@ -1,0 +1,16 @@
+.ButtonsContainer{
+display: flex;
+justify-content: center;
+margin: 25px 0;
+}
+
+.IndividualButton{
+    margin: 0 6px;
+    font-size: 18px;
+    border:none;
+    box-sizing: border-box;
+}
+.IndividualButton:hover{
+    border: 2px solid black;
+    box-sizing: border-box;
+}
