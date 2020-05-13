@@ -27,9 +27,9 @@ const Jobs = () => {
     }
 
     return (
-        <>
+        <div>
             {rendered}
-        </>
+        </div>
     );
 };
 

@@ -12,20 +12,23 @@ const Job = ({ jobTitle, cityName, companyName, applyUrl, createdAtTime }) => {
 
     let cTime;
     if (createdAtTime) {
-        cTime = createdAtTime.createdAt.toLocaleString()
+        cTime = createdAtTime.createdAt.slice(0, 10)
     } else {
-        cTime = 'now'
+        cTime = 'unknown'
     }
     return (
         <>
             <li className={classes.JobListItem}>
-                <div>{jobTitle}</div>
-                <div>{companyName}</div>
-                <div>{cName}</div>
-                <a
-                    target="_blank"
-                    href={applyUrl}> apply here</a>
-                <div>{cTime}</div>
+                <div className={classes.JobTitle}>{jobTitle}</div>
+                <div className={classes.Info}>{companyName}</div>
+                <div className={classes.Info}>{cName}</div>
+                <div className={classes.ApplyContainer}>
+                    <a className={classes.ApplyLink}
+                        target="_blank"
+                        href={applyUrl}>Apply</a>
+
+                </div>
+                <div className={classes.Time}>{cTime}</div>
             </li>
         </>
     );

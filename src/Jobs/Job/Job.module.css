@@ -3,6 +3,42 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100px;
+    height: 200px;
     border: 1px solid black;
+    margin: 2% 0;
+    position: relative;
+}
+
+.JobTitle{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.Info{
+    font-size: 1.4rem;
+}
+.ApplyContainer{
+     position: absolute;
+    right: 0.5%;
+    top:2%;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.ApplyContainer .ApplyLink{
+
+    text-decoration: none;
+    background: yellowgreen;
+    width: 36px;
+    height:18px;
+    color: white;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 12px;
+    
+}
+
+.Time{
+position: absolute;
+left:5px;
+bottom: 10%;
 }
