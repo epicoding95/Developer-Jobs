@@ -3,12 +3,13 @@ import { JobContext } from '../Context/JobContext';
 import Job from './Job/Job';
 import classes from './Jobs.module.css'
 const Jobs = () => {
-    const { jobs, setJobs } = useContext(JobContext)
+    const { jobs, setJobs, whichPage } = useContext(JobContext)
     console.log(jobs.jobs, 'get jobs in jobs')
     let rendered;
-    if (jobs.jobs) {
+    if (jobs) {
         rendered = <ul className={classes.JobsContainer}>
-            {jobs.jobs.map((job, index) => {
+
+            {jobs.slice(whichPage[0], whichPage[1] || 10).map((job, index) => {
                 return < Job
                     key={job.id}
                     jobTitle={job.title}

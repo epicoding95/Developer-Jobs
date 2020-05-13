@@ -22,14 +22,17 @@ query jobs{
 `
 const SearchBar = ({ getJobsHandler }) => {
 
-    const { jobs, setJobs } = useContext(JobContext)
+    const { jobs, setJobs, paginationJobs, setPaginationJobs } = useContext(JobContext)
     const { data, loading, error, fetchMore } = useQuery(GET_JOBS)
+
     useEffect(() => {
         if (data) {
-            setJobs(data)
+            console.log(data.jobs.slice(0, 10), 'data in useEffect')
+            setJobs(data.jobs)
+            setPaginationJobs(data.jobs)
         }
 
-    }, [data])
+    }, [data, paginationJobs])
     if (loading) return 'loading'
     if (error) return 'error'
     return (
