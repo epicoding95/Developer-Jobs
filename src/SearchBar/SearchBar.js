@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import classes from './SearchBar.module.css';
 import { JobContext } from '../Context/JobContext';
-
+import Spinner from '../Spinner/Spinner';
 const GET_JOBS = gql`
 query jobs{
     jobs{
@@ -33,7 +33,7 @@ const SearchBar = ({ getJobsHandler }) => {
         }
 
     }, [data, paginationJobs])
-    if (loading) return 'loading'
+    if (loading) return <Spinner />
     if (error) return 'error'
     return (
         <>
