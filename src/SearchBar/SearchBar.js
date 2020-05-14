@@ -13,6 +13,7 @@ query jobs{
     cities{
       name
     createdAt
+     updatedAt
     }
     company{
       name
@@ -27,7 +28,7 @@ const SearchBar = ({ getJobsHandler }) => {
 
     useEffect(() => {
         if (data) {
-            console.log(data.jobs.slice(0, 10), 'data in useEffect')
+
             setJobs(data.jobs)
             setPaginationJobs(data.jobs)
         }
@@ -37,14 +38,14 @@ const SearchBar = ({ getJobsHandler }) => {
     if (error) return 'error'
     return (
         <>
-            <form >
+            {/* <form >
                 <div className={classes.SearchBarContainer}>
                     <div className={classes.InfoContainer}>
                         <label style={{ marginRight: '180px' }}
                             htmlFor='title'>Job title</label>
                         <select
                             // onChange={(e) => setTitle(e.target.value)}
-                            // value={title}
+                            value={data.jobs[0].cities[0]}
                             id='title'
                             className={classes.DropDownContainer}
                             name='jobs'>
@@ -80,7 +81,7 @@ const SearchBar = ({ getJobsHandler }) => {
                     <button
                         className={classes.SearchButton}>Search</button>
                 </div>
-            </form>
+            </form> */}
         </>
     );
 };

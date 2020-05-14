@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Job.module.css'
 const Job = ({ jobTitle, cityName, companyName, applyUrl, createdAtTime }) => {
 
-    // console.log(cityName.name)
+
     let cName;
     if (cityName) {
         cName = cityName.name

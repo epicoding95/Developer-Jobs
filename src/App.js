@@ -5,6 +5,7 @@ import SearchBar from '../src/SearchBar/SearchBar';
 import Jobs from '../src/Jobs/Jobs';
 import { JobContextProvider } from './Context/JobContext';
 import PaginationButtons from './PaginationButtons/PaginationButton';
+import Header from './Header/Header';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <div >
       <JobContextProvider>
         <SearchBar />
+        <Header />
         <Jobs />
         <PaginationButtons />
       </JobContextProvider>

@@ -4,26 +4,35 @@
     justify-content: flex-start;
     align-items: center;
     height: 200px;
-    border: 1px solid black;
+    border: 0.5px solid gainsboro;
     margin: 2% 0;
     position: relative;
+
+}
+.JobListItem:hover{
+    border: 1px solid black;
+    margin: 3% 0;
+    font-weight: bolder;
 }
 
 .JobTitle{
     font-size: 1.5rem;
     font-weight: bolder;
+    white-space: pre-wrap;
+    
 }
 .Info{
     font-size: 1.4rem;
 }
 .ApplyContainer{
-     position: absolute;
+    position: absolute;
     right: 0.5%;
     top:2%;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
+
+   
 }
+
 .ApplyContainer .ApplyLink{
 
     text-decoration: none;
